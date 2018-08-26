@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic');
+
+@import "variables";
+
+body {
+  font-family: 'Dosis', sans-serif;
+  background: #2B2D3E;
+  color: #d5d5d5;
+  font-size: 18px;
+
+  h2 {
+    color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #86fff2;
+    border-bottom: 1px solid #8ec7c9;
+  }
+
+  p {
+    line-height: 1.35em;
+    margin: 0 0 2em 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 0 20px 30px;
+      padding: 0 0 0 2px;
+    }
+  }
+}
+
+.section {
+
+  &.header {
+    background: #2B2D3E;
+    border-bottom: 1px solid #cbd0f3;
+  }
+
+  &.networkOverview {
+    padding: 5px 0 15px;
+    background: linear-gradient(to right, #3b698a 0%, #705041 100%);
+  }
+
+  &.candidatesOverview {
+    padding: 5px 0 15px;
+    background: linear-gradient(to right, #3b698a 0%, #705041 100%);
+  }
+
+  &.footer {
+    background: #1E2030;
+    border-top: 1px solid #808499;
+  }
+}
+
+.container {
+  padding: 10px;
+
+  @include break5 {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+header {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  flex-direction: column;
+
+  @include break4 {
+    flex-direction: row;
+  }
+
+  .logo {
+    font-size: 1.6em;
+    color: #fff;
+    border: none;
+    margin: 4px 0 14px;
+
+    @include break4 {
+      margin: 0;
+    }
+
+    img {
+      height: 28px;
+      position: relative;
+      top: 3px;
+      margin: 0 7px 0 0;
+    }
+  }
+
+  .navigation {
+    padding: 7px 0;
+    text-align: center;
+
+    li {
+      list-style: none;
+      margin: 10px 0 0;
+
+      @include break3 {
+        display: inline-block;
+        margin: 0 0.4em;
+      }
+
+      @include break4 {
+        float: left;
+        margin: 0 0 0 1.4em;
+      }
+      
+      a {
+        color: #d3eaff;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        border: none;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.networkOverviewContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include break4 {
+    flex-direction: row;
+  }
+
+  .networkOverviewItem {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 0 10px;
+    padding: 10px 5px;
+    background: #2b3246;
+    border-radius: 5px;
+
+    @include break4 {
+      width: 24%;
+      margin: 0;
+    }
+
+    .title {
+      font-size: 1em;
+      margin: 2px 0 10px;
+    }
+    .value {
+      font-size: 1.5em;
+      color: #84d570;
+      margin: 0 0 5px;
+
+      &.small {
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+
+.candidatesOverviewContent {
+  background: rgba(43, 45, 62, 0.75);
+  padding: 24px;
+  border-radius: 5px;
+
+  .overviewTable {
+    font-family: 'PT Mono', monospace;
+    color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+
+    tbody tr {
+      &:nth-child(2n-1) {
+        background: rgba(111, 125, 121, 0.21);
+      }
+    }
+
+    th {
+      font-size: 0.75em;
+      text-align: left;
+      padding: 12px 10px;
+    }
+
+    td {
+      font-size: 0.7em;
+      padding: 15px 10px;
+
+      &.delegateIndex {
+        color: #aaaaaa;
+        padding: 10px 5px 10px 20px;
+      }
+
+      .statusActiveValidator {
+        color: #64d872;
+      }
+
+      .statusCandidate {
+        color: #7c7c7c;
+      }
+    }
+  }
+}
+
+.footer {
+
+}

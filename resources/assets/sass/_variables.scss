@@ -1,0 +1,30 @@
+// Adaptive
+@mixin break1 {
+  @media (min-width: 565px) {
+    @content;
+  }
+}
+
+@mixin break2 {
+  @media (min-width: 665px) {
+    @content;
+  }
+}
+
+@mixin break3 {
+  @media (min-width: 560px) {
+    @content;
+  }
+}
+
+@mixin break4 {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin break5 {
+  @media (min-width: 1010px) {
+    @content;
+  }
+}
